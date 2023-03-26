@@ -1,0 +1,487 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+:root {
+  --color-dark: #363440;
+  --color-light: #f6f7ee;
+  --color-light-2: #fefff5;
+  --color-accent: #d75c1d;
+  --color-accent-hover: #e78655;
+  --padding-size: 3rem;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8em;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-dark);
+  font-family: "Noto Serif Display", serif;
+  margin-bottom: var(--padding-size);
+}
+
+h1 {
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--color-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 2px solid var(--color-light);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  width: 100%;
+}
+
+nav ul {
+  display: none;
+}
+
+nav a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+nav a.logo {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a,
+nav button {
+  font-size: 0.9rem;
+  margin: 0.5rem 1rem;
+}
+
+/* UI Elements */
+nav button,
+#contact button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+}
+nav button:hover,
+#contact button:hover {
+  background-color: var(--color-accent-hover);
+  color: white;
+  border: none;
+}
+
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-style: solid;
+  border-color: var(--color-accent);
+  background-color: transparent;
+  color: var(--color-accent);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+input[type="text"],
+input[type="email"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: white;
+  border: 2px solid var(--color-accent-hover);
+  border-radius: 5px;
+  color: var(--color-dark);
+  margin-top: 0.8rem;
+}
+
+#contact_form > div:nth-child(3) textarea {
+  box-sizing: border-box;
+  height: 150px;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: white;
+  border: 2px solid var(--color-accent-hover);
+  color: var(--color-dark);
+  font-family: "Poppins", sans-serif;
+  margin-top: 0.8rem;
+  border-radius: 5px;
+}
+
+/* Header */
+header {
+  margin-top: 5rem;
+  display: flex;
+  min-height: 50vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+header p {
+  color: var(--color-dark);
+}
+
+header button {
+  margin: 3rem;
+  margin-left: 0;
+}
+.highlight button {
+  background-color: transparent;
+  margin-top: 3rem;
+}
+.highlight button:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+.header_text {
+  padding: 2rem;
+  width: 30vw;
+  min-width: 200px;
+}
+
+.header_graphics {
+  width: 25vw;
+  height: 25vw;
+  min-width: 200px;
+  min-height: 200px;
+  margin-bottom: 1rem;
+  padding: 3rem;
+  padding-top: 0;
+}
+.header_graphics img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#advantages {
+  padding: var(--padding-size);
+  background-color: var(--color-light);
+}
+.advantages_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.advantages_card {
+  background-color: white;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+}
+.advantages_card_graphics {
+  background-image: url("https://source.unsplash.com/random/?architecture");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+.advantages_card_text {
+  padding: 2rem;
+}
+
+#product {
+  padding: var(--padding-size);
+  background-color: white;
+}
+
+#product article {
+  margin-bottom: 2rem;
+}
+
+.highlight h2 {
+  line-height: 1.3;
+}
+
+.product_text {
+  width: 100%;
+  min-width: 200px;
+}
+
+.product_grid {
+  display: grid;
+  gap: 3rem;
+}
+.product_graphics {
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://source.unsplash.com/random/?city");
+  background-repeat: no-repeat;
+}
+.highlight {
+  padding: var(--padding-size);
+  background-color: var(--color-light);
+}
+.highlight_small_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.highlight_small_cards div {
+  padding: var(--padding-size);
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--color-light);
+}
+
+#team {
+  padding: var(--padding-size);
+}
+#team a {
+  color: var(--color-dark);
+}
+#team a:hover {
+  color: var(--color-grey);
+}
+#team ul {
+  margin-bottom: 2rem;
+}
+#team h2 {
+  text-align: center;
+}
+#team article {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.team_graphics {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://source.unsplash.com/random/?face");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.team_text {
+  line-height: 2rem;
+}
+#contact {
+  padding: var(--padding-size);
+}
+
+#contact_form {
+  background-color: var(--color-light-2);
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  border: 2px solid var(--color-accent-hover);
+  margin-top: 2rem;
+}
+#contact_form > div:nth-child(3) {
+  grid-column: 1 / span 3;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  gap: 2rem;
+  padding: 5vh 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-light-2);
+  align-items: baseline;
+  border-top: 2px solid var(--color-light);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+footer a {
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+footer h2 {
+  color: #d75c1d;
+}
+footer section {
+  display: flex;
+  gap: 2rem;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 375px) {
+  .product_grid {
+    display: grid;
+  }
+  html {
+    font-size: 1em;
+  }
+  .header_text {
+    min-width: 300px;
+  }
+
+  .header_graphics {
+    min-width: 250px;
+    min-height: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .product_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product_graphics {
+    height: 100%;
+  }
+  .highlight_small_cards {
+    flex-direction: row;
+  }
+  .highlight_small_cards div {
+    width: 200px;
+  }
+  #team article {
+    flex-direction: row;
+  }
+  .art_two .team_graphics {
+    order: 2;
+  }
+  .team_graphics {
+    width: 300px;
+    height: 300px;
+  }
+  #contact_form {
+    display: grid;
+  }
+  nav a.logo {
+    margin: 1rem 2rem;
+  }
+  nav li a,
+  nav button {
+    margin: 1rem 2rem;
+  }
+  nav li {
+    margin: 0px 1rem;
+  }
+  .product_text {
+    width: 30vw;
+  }
+  nav ul {
+    display: inline-block;
+  }
+  .header_text {
+    min-width: 320px;
+  }
+  .header_graphics {
+    min-width: 320px;
+    min-height: 320px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #contact_form {
+    width: 800px;
+  }
+  :root {
+    --padding-size: 6rem;
+  }
+  h2 {
+    margin-bottom: 4rem;
+    line-height: 1.7;
+  }
+  #contact h2 {
+    margin-bottom: 1rem;
+  }
+  .team_graphics {
+    width: 500px;
+    height: 500px;
+  }
+  html {
+    font-size: 1.3em;
+  }
+  #team article {
+    gap: 10vw;
+  }
+  #team {
+    padding-bottom: 0;
+  }
+  .header_graphics {
+    min-width: 400px;
+    min-height: 400px;
+  }
+  header {
+    min-height: 80vh;
+  }
+}
